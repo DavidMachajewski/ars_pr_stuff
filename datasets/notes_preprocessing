@@ -1,0 +1,10 @@
+1. Blurring function
+    - GaussianBlur Kernel size (9, 9)
+2. adaptive thresholding
+    - adaptive_thresh_gaussian_c, thresh_binary, 11, 2
+        -> 11 nearest neighbour cells
+3. dilation - expose main features of an image
+    - bitwise_not( thresholdimg, ... )
+    - cv2.dilate(proc, kernel)
+        - np.array([[0., 1., 0.], [1., 1., 1.], [0., 1., 0.]], np.uint8)
+4. finding largest feature with flood filling

@@ -1,0 +1,22 @@
+A. TF Lite interpreter
+B. TF Lite converter
+
+1. Model creation
+    a) To use a model with TensorFlow Lite, you must convert a full TensorFlow model
+    into the TensorFlow Lite format—you cannot create or train a model using TensorFlow Lite.
+    So you must start with a regular TensorFlow model, and then convert the model.
+
+    !!! VERY IMPORTANT !!!
+    TensorFlow Lite supports a limited subset of TensorFlow operations,
+    so not all models can be converted.
+    For details, read about the TensorFlow Lite operator compatibility.
+
+    >>> https://www.tensorflow.org/lite/guide/ops_compatibility
+
+2. Converting
+
+3. Post-training quantization
+    a) https://www.tensorflow.org/lite/performance/post_training_quantization
+
+    b) Quantization aware training for higher accuracy...
+    https://github.com/tensorflow/tensorflow/tree/r1.14/tensorflow/contrib/quantize

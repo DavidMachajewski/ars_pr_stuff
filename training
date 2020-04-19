@@ -1,0 +1,30 @@
+from networks import cnn
+from data import *
+from algorithms import sudoku_slicing
+
+##############################################################################
+#                          PREPARE DATA
+##############################################################################
+# labelsArray = [1 * k for k in range(1, 10) for i in range(0, 915)]
+##############################################################################
+PATH_SUDOKUS = "C:/Users/Natalia/Desktop/SudokuBilder/full_sudokus/data/"
+PATH_LABELS = "C:/Users/Natalia/Desktop/SudokuBilder/full_sudokus/labels2.txt"
+PATH_SLICED_SUDOKUS = "C:/Users/Natalia/PycharmProjects/ocr/dataset/real_with_noise/"
+PATH_CSV = "C:/Users/Natalia/PycharmProjects/ocr/dataset/real_mnist.csv"
+dat = Data()
+labels_df = dat.load_json_to_df(PATH_LABELS)
+labels_arr = [i for i in labels_df['labels']]
+# Create flat labels list
+flat_label_list = [item for sublist in labels_arr for item in sublist]
+
+counter = 0
+for i in labels_arr:
+    counter = counter + 1
+    if len(i) is not 81:
+        print("False, check annotation: " + str(counter))
+
+# Slice all real Sudokus from source folder
+sudoku_slicing.slice_all_sudokus_from_folder(PATH_SUDOKUS, PATH_SLICED_SUDOKUS)
+# Get cropped sudokus from folder and save them to csv
+df_csv = dat.data_to_csv(folder=PATH_SLICED_SUDOKUS, PATH_TO_CSV_FILE=PATH_CSV, labelsArray=flat_label_list)
+print(dat.dataframe)

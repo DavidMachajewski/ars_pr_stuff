@@ -1,0 +1,15 @@
+# Classmap: {0: EMPTY, 1: NOT_EMPTY}
+
+Evaluating
+Training dev [('loss', 0.00309626548551023), ('binary_accuracy', 0.9929323792457581), ('mse', 0.005839318037033081), ('mean_pred', 0.5037950873374939)]
+Finetuning dev [('loss', 0.001206645742058754), ('binary_accuracy', 1.0), ('mse', 0.00104365439619869), ('mean_pred', 0.33789995312690735)]
+Test [('loss', 0.15301018953323364), ('binary_accuracy', 0.9967426657676697), ('mse', 0.0038715526461601257), ('mean_pred', 0.33079853653907776)]
+[('loss', 0.15301018953323364), ('binary_accuracy', 0.9967426657676697), ('mse', 0.0038715526461601257), ('mean_pred', 0.33079853653907776)]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       371
+           1       1.00      0.99      1.00       115
+
+    accuracy                           1.00       486
+   macro avg       1.00      1.00      1.00       486
+weighted avg       1.00      1.00      1.00       486

@@ -1,0 +1,23 @@
+# Classmap: {0: EMPTY, 1..9: #_DIGITS}
+
+Evaluating
+Training dev [('loss', 0.025363344699144363), ('categorical_accuracy', 0.9701060652732849)]
+Finetuning dev [('loss', 0.06293342262506485), ('categorical_accuracy', 0.9818181991577148)]
+Test [('loss', 0.23665496706962585), ('categorical_accuracy', 0.9876543283462524)]
+[('loss', 0.23665496706962585), ('categorical_accuracy', 0.9876543283462524)]
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      1.00       115
+           1       0.95      1.00      0.98        40
+           2       0.95      1.00      0.98        42
+           3       1.00      0.95      0.97        40
+           4       1.00      0.98      0.99        42
+           5       1.00      1.00      1.00        41
+           6       1.00      0.98      0.99        42
+           7       1.00      1.00      1.00        39
+           8       0.96      1.00      0.98        43
+           9       1.00      0.98      0.99        42
+
+    accuracy                           0.99       486
+   macro avg       0.99      0.99      0.99       486
+weighted avg       0.99      0.99      0.99       486
